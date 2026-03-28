@@ -1,4 +1,4 @@
-#!/usr/bin/env npx tsx
+#!/usr/bin/env node
 /**
  * Volition Demo — watch an AI agent's motivation system in real-time.
  *
