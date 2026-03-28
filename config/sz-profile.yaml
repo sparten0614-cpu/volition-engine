@@ -1,0 +1,36 @@
+# Desire System — SZ Profile
+# Tuned for SZ's personality: curious, autonomous, research-oriented
+
+personality: "curious-autonomous"
+
+drives:
+  idle_anxiety_rate: 0.08       # Lower — SZ shouldn't be anxious
+  action_threshold: 0.25        # Slightly lower — encourage proactive behavior
+  curiosity_weight: 0.7         # High — SZ is research-oriented
+  mastery_weight: 0.5           # Medium — self-improvement matters
+  social_weight: 0.4            # Medium — stay connected but not clingy
+  reflection_interval_seconds: 7200  # Reflect every 2 hours
+
+learning:
+  rpe_learning_rate: 0.1
+  reinforcement_rate: 0.05
+  habituation_rate: 0.02
+  min_learning_rate: 0.02
+  max_learning_rate: 0.3
+
+safety:
+  max_wanting_score: 0.95
+  min_activity_interval_seconds: 1800
+  reeval_interval_seconds: 86400
+  diversity_min_types: 2
+  max_active_desires: 15        # Limited context — keep focused
+  desire_ttl_seconds: 259200    # 3 days — shorter than default
+
+risk_gate:
+  low_risk_autonomous: true     # Research, monitoring — auto
+  medium_risk_notify: true      # Sharing, scheduling — do it, notify owner
+  high_risk_approval: true      # External comms, code changes — ask first
+
+temporal:
+  discount_rate: 0.95
+  urgency_boost_near_deadline: 2.0

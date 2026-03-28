@@ -1,0 +1,36 @@
+# Desire System — Default Configuration
+# Agent 欲望系统默认配置
+
+personality: "balanced-partner"
+
+drives:
+  idle_anxiety_rate: 0.12
+  action_threshold: 0.30
+  curiosity_weight: 0.6
+  mastery_weight: 0.5
+  social_weight: 0.4
+  reflection_interval_seconds: 3600  # Reflect every 1 hour
+
+learning:
+  rpe_learning_rate: 0.1
+  reinforcement_rate: 0.05
+  habituation_rate: 0.02
+  min_learning_rate: 0.02
+  max_learning_rate: 0.3
+
+safety:
+  max_wanting_score: 0.95
+  min_activity_interval_seconds: 1800  # Force action after 30min idle
+  reeval_interval_seconds: 86400       # Re-evaluate helplessness daily
+  diversity_min_types: 2
+  max_active_desires: 30
+  desire_ttl_seconds: 604800           # Expire after 7 days if low wanting
+
+risk_gate:
+  low_risk_autonomous: true
+  medium_risk_notify: true
+  high_risk_approval: true
+
+temporal:
+  discount_rate: 0.95
+  urgency_boost_near_deadline: 2.0
